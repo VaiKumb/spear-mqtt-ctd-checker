@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spear-mqtt-ctd"
+version = "0.1.0"
+description = "MQTT client library to deserialize CTD protobuf messages and check temperature"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Proprietary" }
+dependencies = [
+    "paho-mqtt",
+    "protobuf",
+    "certifi",
+    "PyYAML",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+spear-ctd-checker = "spear_mqtt_ctd.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-p no:launch_testing"

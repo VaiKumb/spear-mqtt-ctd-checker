@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package spear;
+
+import "google/protobuf/timestamp.proto";
+
+message CtdSensor {
+
+    google.protobuf.Timestamp stamp = 1;
+
+    // deg C (ITS-90)
+    float temperature = 2;
+
+    // milliseimens / cm (mS/cm)
+    float conductivity = 3;
+
+    // practical salinity units (psu)
+    float salinity = 4;
+
+    // meters
+    double depth = 5;
+
+    // meters per second
+    float soundspeed= 6;
+}
