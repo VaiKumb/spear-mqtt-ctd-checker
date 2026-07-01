@@ -334,4 +334,4 @@ This repo does **not** require ROS or the Spear GUI to run.
 
 ## License
 
-Proprietary — adjust as needed for your organization.
+Proprietary
